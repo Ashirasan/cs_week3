@@ -31,14 +31,17 @@ class MyApp extends StatelessWidget {
           body: Column(
             children: [
               const Text(
-                'Achirawit',
+                'POP CAT',
                 style: TextStyle(fontSize: 20),
               ),
-              const Text(
-                'Boontaeng',
-                style: TextStyle(fontSize: 20),
-              ),
-              Image.network('https.://picsum.photos/250?image=9'),
+              // const Text(
+              //   'Boontaeng',
+              //   style: TextStyle(fontSize: 20),
+              // ),
+              //Image.network('https://cdn.britannica.com/41/126641-050-E1CA0E61/cat-suns-hill-Parthenon-Athens-Greece-Acropolis.jpg'),
+              // Image.asset('assets/images/cat.jpg'),
+              Image.asset('assets/images/pop-cat.gif'),
+              SizedBox(height: 15,),
               ElevatedButton(
                   onPressed: () {
                     print("Click me ");

@@ -73,7 +73,7 @@ class MyApp extends StatelessWidget {
                             ),
                             Icon(Icons.battery_0_bar),
                             Expanded(child: Text('Battery Capacity (kWh)')),
-                            Expanded(child: SizedBox(height: 45,child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),),),))
+                            Expanded(child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),),))
                           ],
                         ),
                         SizedBox(height: 10,),
@@ -111,19 +111,11 @@ class MyApp extends StatelessWidget {
                             ),
                             Icon(Icons.battery_0_bar),
                             Expanded(child: Text('Voltage(V)')),
-                            Text('225'),
+                            Expanded(child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),),)),
                           ],
                         ),
-                        Row(
-                          children: [
-                            SizedBox(
-                              height: 10,
-                            ),
-                            Icon(Icons.bolt),
-                            Expanded(child: Text('Charging Power(kWh)')),
-                            Text('0.84'),
-                          ],
-                        ),
+                        SizedBox(height: 10,),
+                        
                       ],
                     )),
                 Container(
@@ -157,7 +149,34 @@ class MyApp extends StatelessWidget {
                         border: OutlineInputBorder(),
                         labelText: 'Charge rate A'),
                   ),
-                )
+                ),
+                Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10),
+                    child: const Column(
+                      children: [
+                        Row(
+                          children: [
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Icon(Icons.battery_0_bar),
+                            Expanded(child: Text('Charging Power(Wh)')),
+                            Expanded(child: Text('4.1400')),
+                          ],
+                        ),
+                        
+                        Row(
+                          children: [
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Icon(Icons.bolt),
+                            Expanded(child: Text('Charging Time(hrs)')),
+                            Expanded(child: Text('7.085')),
+                          ],
+                        ),
+                      ],
+                    )),
               ],
             ),
             // Row(

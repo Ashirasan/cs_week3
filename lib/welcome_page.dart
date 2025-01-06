@@ -1,3 +1,5 @@
+import 'package:cs_week3/about_page.dart';
+import 'package:cs_week3/display_page.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -10,7 +12,8 @@ class WelcomePage extends StatefulWidget {
 class _WelcomePageState extends State<WelcomePage> {
 
   String _output = '';
-  final _input = TextEditingController();
+  final _name = TextEditingController();
+  final _age = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,13 +31,19 @@ class _WelcomePageState extends State<WelcomePage> {
                     child: Text('Welcome to WelcomePage'),
                   ),
                   const Text('EIEI WELCOME PAGE'),
-                  TextField(controller: _input,
+                  TextField(controller: _name,
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                     hintText: 'Enter Name',
                     labelText: 'Enter Name',
                   ),),
                   const SizedBox(height: 5,),
+                  TextField(controller: _age,
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Enter Your Age',
+                    labelText: 'Enter Your Age',
+                  ),),
                   Text(_output,style: const TextStyle(fontSize: 20),),
                 ],
               )),
@@ -43,11 +52,19 @@ class _WelcomePageState extends State<WelcomePage> {
           ),
           ElevatedButton(onPressed: () {
             debugPrint('Pressed');
-            String ipt = _input.text;
+            String ipt = _name.text;
             setState(() {
               _output = ipt;
             });
           }, child: const Text('Let GO')),
+          ElevatedButton(onPressed: (){
+            // Navigator.push(context, MaterialPageRoute(builder:(context)=>AboutPage()));
+            Navigator.pushNamed(context, '/aboutpage');
+          }, child: const Text('Go to Ev calculator')),
+          ElevatedButton(onPressed: (){
+            // Navigator.push(context, MaterialPageRoute(builder: (context)=>DisplayPage(name: _name.text,age: 21,)));
+            Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>DisplayPage(name: _name.text,age: 21,)), (route)=>false);
+          }, child: const Text('Display page'))        
         ],
       ),
     );

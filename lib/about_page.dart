@@ -26,7 +26,9 @@ class _AboutPageState extends State<AboutPage> {
             style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
           ),
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(Icons.home),
           ),
         ),

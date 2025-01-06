@@ -19,7 +19,12 @@ class MyApp extends StatelessWidget {
           appBarTheme: const AppBarTheme(color: Colors.green),
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
           useMaterial3: true),
-      home: AboutPage(),
+      // home: WelcomePage(),
+      initialRoute: '/',
+      routes: {
+        '/':(context) => WelcomePage(),
+        '/aboutpage':(context) =>AboutPage(),
+      },
     );
   }
 }

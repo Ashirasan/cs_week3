@@ -64,7 +64,17 @@ class _WelcomePageState extends State<WelcomePage> {
           ElevatedButton(onPressed: (){
             // Navigator.push(context, MaterialPageRoute(builder: (context)=>DisplayPage(name: _name.text,age: 21,)));
             Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>DisplayPage(name: _name.text,age: 21,)), (route)=>false);
-          }, child: const Text('Display page'))        
+          }, child: const Text('Display page')) , 
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context,'/listpage');
+          }, child: Text('List Page')), 
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context,'/futurepage');
+          }, child: Text('Future Page')),
+          ElevatedButton(onPressed: (){
+            Navigator.pushNamed(context,'/httppage');
+          }, child: Text('Http Page')),
+          
         ],
       ),
     );

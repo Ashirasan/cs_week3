@@ -1,4 +1,7 @@
 import 'package:cs_week3/about_page.dart';
+import 'package:cs_week3/http_page.dart';
+import 'package:cs_week3/list_page.dart';
+import 'package:cs_week3/my_futurebuilder_page.dart';
 import 'package:cs_week3/welcome_page.dart';
 import 'package:flutter/material.dart';
 
@@ -24,6 +27,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/':(context) => WelcomePage(),
         '/aboutpage':(context) =>AboutPage(),
+        '/listpage':(context) =>ListPage(),
+        '/futurepage':(context)=>MyFutureBuilderPage(),
+        '/httppage':(context)=>HttpPage()
       },
     );
   }

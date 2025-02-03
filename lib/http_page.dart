@@ -11,7 +11,7 @@ class HttpPage extends StatefulWidget {
 
 class _HttpPageState extends State<HttpPage> {
   Future<String> fetchData() async{
-    var res = await http.get(Uri.parse('https://itpart.net/mobile/api/product3.php'));
+    var res = await http.get(Uri.parse('https://itpart.net/mobile/api/product1.php'));
     if(res.statusCode == 200){
       String strBody = res.body.toString();
       debugPrint(strBody);

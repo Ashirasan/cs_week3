@@ -1,6 +1,7 @@
 import 'package:cs_week3/about_page.dart';
 import 'package:cs_week3/detail_page.dart';
 import 'package:cs_week3/display_page.dart';
+import 'package:cs_week3/my_listpage.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -113,7 +114,9 @@ class _WelcomePageState extends State<WelcomePage> {
                             )));
               },
               child: Text('Detail Page 1')),
-          
+          ElevatedButton(onPressed: (){
+            Navigator.push(context,MaterialPageRoute(builder: (context)=> const MyListPage()));
+          }, child: Text("My List Page")),
           // ListView.builder(itemBuilder: (context,index)=>Text(index.toString()),itemCount: 2,)
         ],
       ),
